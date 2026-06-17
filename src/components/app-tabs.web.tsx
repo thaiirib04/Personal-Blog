@@ -14,6 +14,7 @@ import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
 
 import { Colors, MaxContentWidth, Spacing } from '@/constants/theme';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function AppTabs() {
   return (
@@ -24,9 +25,31 @@ export default function AppTabs() {
           <TabTrigger name="home" href="/" asChild>
             <TabButton>Home</TabButton>
           </TabTrigger>
-          <TabTrigger name="explore" href="/explore" asChild>
-            <TabButton>Explore</TabButton>
+          <TabTrigger name="arte" href="/arte" asChild>
+            <TabButton>
+              <MaterialIcons name='museum' size={20} color="orange">
+                </MaterialIcons>Arte</TabButton>
           </TabTrigger>
+          <TabTrigger name="culinaria" href="/culinaria" asChild>
+            <TabButton>
+              <MaterialIcons name='restaurant' size={20} color="orange">
+                </MaterialIcons>Culinária</TabButton>
+          </TabTrigger>
+          <TabTrigger name="hobbies" href="/hobbies" asChild>
+            <TabButton>
+              <MaterialIcons name='brush' size={20} color="orange">
+                </MaterialIcons>hobbies</TabButton>
+          </TabTrigger>
+          <TabTrigger name="fe" href="/fe" asChild>
+            <TabButton>
+              <MaterialIcons name='auto-awesome'  size={20} color="orange">
+                </MaterialIcons>Fé</TabButton>
+          </TabTrigger>
+          <TabTrigger name="Gastronomia" href="/gastronomia" asChild>
+            <TabButton>
+              <MaterialIcons name='local-cafe' size={20} color="orange"></MaterialIcons>
+         Gastronomia</TabButton>
+            </TabTrigger>
         </CustomTabList>
       </TabList>
     </Tabs>
@@ -60,16 +83,7 @@ export function CustomTabList(props: TabListProps) {
 
         {props.children}
 
-        <ExternalLink href="https://docs.expo.dev" asChild>
-          <Pressable style={styles.externalPressable}>
-            <ThemedText type="link">Docs</ThemedText>
-            <SymbolView
-              tintColor={colors.text}
-              name={{ ios: 'arrow.up.right.square', web: 'link' }}
-              size={12}
-            />
-          </Pressable>
-        </ExternalLink>
+      
       </ThemedView>
     </View>
   );

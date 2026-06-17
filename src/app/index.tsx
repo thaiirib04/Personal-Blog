@@ -2,7 +2,7 @@ import * as Device from 'expo-device';
 import { Platform, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AnimatedIcon } from '@/components/animated-icon';
+import { Image } from 'react-native';
 import { HintRow } from '@/components/hint-row';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -33,29 +33,32 @@ export default function HomeScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
+          <Image 
+            source={require('../../assets/images/download.jpg')} 
+             style={{ width: 1000, height: 500, marginBottom: 20 }} 
+          />
           <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
+            Bem vindo ao blog Ju'sLife
           </ThemedText>
+          <ThemedText>"A medida do amor é amar sem medida" - Santo Agostinho</ThemedText>
         </ThemedView>
-
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
 
         <ThemedView type="backgroundElement" style={styles.stepContainer}>
           <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
+            title="Arte"
           />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
+          <HintRow title="Gastronomia" />
           <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
+            title="Viagem"
+          />
+           <HintRow
+            title="Hobbies"
+          />
+           <HintRow
+            title="Fé"
           />
         </ThemedView>
 
-        {Platform.OS === 'web' && <WebBadge />}
       </SafeAreaView>
     </ThemedView>
   );

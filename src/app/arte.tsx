@@ -37,89 +37,76 @@ export default function TabTwoScreen() {
       style={[styles.scrollView, { backgroundColor: theme.background }]}
       contentInset={insets}
       contentContainerStyle={[styles.contentContainer, contentPlatformStyle]}>
+
       <ThemedView style={styles.container}>
         <ThemedView style={styles.titleContainer}>
-          <ThemedText type="subtitle">Explore</ThemedText>
+          
+              <Image
+                source={require('../../assets/images/arte.jpg')} 
+             style={{ width: 800, height: 300, marginBottom: 20 }} 
+              />
+          <ThemedText type="subtitle">ARTE🖌️</ThemedText>
           <ThemedText style={styles.centerText} themeColor="textSecondary">
-            This starter app includes example{'\n'}code to help you get started.
+            "Os espelhos são usados para ver o rosto; a arte para ver a alma."
+          </ThemedText>
+        </ThemedView>
+        
+          <ThemedText style={styles.contentContainer}>
+            leia um pouco sobre o que é a arte...
           </ThemedText>
 
-          <ExternalLink href="https://docs.expo.dev" asChild>
-            <Pressable style={({ pressed }) => pressed && styles.pressed}>
-              <ThemedView type="backgroundElement" style={styles.linkButton}>
-                <ThemedText type="link">Expo documentation</ThemedText>
-                <SymbolView
-                  tintColor={theme.text}
-                  name={{ ios: 'arrow.up.right.square', android: 'link', web: 'link' }}
-                  size={12}
-                />
-              </ThemedView>
-            </Pressable>
-          </ExternalLink>
-        </ThemedView>
-
         <ThemedView style={styles.sectionsWrapper}>
-          <Collapsible title="File-based routing">
+          <Collapsible title="Origem da palavra ARTE">
             <ThemedText type="small">
-              This app has two screens: <ThemedText type="code">src/app/index.tsx</ThemedText> and{' '}
-              <ThemedText type="code">src/app/explore.tsx</ThemedText>
+              
+              
             </ThemedText>
             <ThemedText type="small">
-              The layout file in <ThemedText type="code">src/app/_layout.tsx</ThemedText> sets up
-              the tab navigator.
+              A palavra arte deriva do latim ars (ou artis), que significa literalmente "técnica", "habilidade" ou "capacidade de fazer alguma coisa". Por sua vez, o termo latino está associado à raiz indo-europeia ar-, que traz o sentido de "ajustar" ou "unir".
             </ThemedText>
-            <ExternalLink href="https://docs.expo.dev/router/introduction">
+            <ExternalLink href="https://etimologia.com.br/arte/">
               <ThemedText type="linkPrimary">Learn more</ThemedText>
             </ExternalLink>
           </Collapsible>
 
-          <Collapsible title="Android, iOS, and web support">
+          <Collapsible title="A arte no Brasil">
             <ThemedView type="backgroundElement" style={styles.collapsibleContent}>
               <ThemedText type="small">
-                You can open this project on Android, iOS, and the web. To open the web version,
-                press <ThemedText type="smallBold">w</ThemedText> in the terminal running this
-                project.
+                <ThemedText type="smallBold">A identidade cultural brasileira não é um rótulo único: ela se formou historicamente pela soma de heranças europeias, indígenas e africanas, aos quais se agregaram, ao longo do século XIX, fluxos intensos de imigração (especialmente no Sul) que trouxeram novos hábitos, ofícios, repertórios musicais, festas e modos de viver.
+
+              A arte registra a história brasileira com diferentes símbolos estéticos e linguagens artísticas que foram se tornando sinais de pertencimento e memória do Brasil. 
+              São eles: pintura, escultura, arquitetura, música, dança e festas.</ThemedText>
               </ThemedText>
-              <Image
-                source={require('@/assets/images/tutorial-web.png')}
-                style={styles.imageTutorial}
-              />
+              
             </ThemedView>
           </Collapsible>
 
-          <Collapsible title="Images">
+          <Collapsible title="Arte e Psicologia">
             <ThemedText type="small">
-              For static images, you can use the <ThemedText type="code">@2x</ThemedText> and{' '}
-              <ThemedText type="code">@3x</ThemedText> suffixes to provide files for different
-              screen densities.
+              A psiquiatra alagoana Nise da Silveira (1905–1999) revolucionou a saúde mental no Brasil ao recusar tratamentos violentos (como eletrochoque). Em vez disso, ela introduziu ateliês de pintura e modelagem, utilizando a arte como ferramenta terapêutica para acessar o inconsciente e promover a reabilitação de pacientes com esquizofrenia.
+              <ThemedText type="code"></ThemedText> 
             </ThemedText>
-            <Image source={require('@/assets/images/react-logo.png')} style={styles.imageReact} />
-            <ExternalLink href="https://reactnative.dev/docs/images">
-              <ThemedText type="linkPrimary">Learn more</ThemedText>
-            </ExternalLink>
           </Collapsible>
 
-          <Collapsible title="Light and dark mode components">
+          <Collapsible title="Algumas obras...">
             <ThemedText type="small">
-              This template has light and dark mode support. The{' '}
-              <ThemedText type="code">useColorScheme()</ThemedText> hook lets you inspect what the
-              user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+              Alguma obras famosas e brasileiras:
             </ThemedText>
-            <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-              <ThemedText type="linkPrimary">Learn more</ThemedText>
-            </ExternalLink>
+            <ThemedText type="small">
+              Abaporu (1928) - Tarsila do Amaral</ThemedText>
+              <ThemedText type="small">
+              Os Retirantes (1944) - Cândido Portinari</ThemedText> 
+               <ThemedText type="small">
+              Operários (1933) - Tarsila do Amaral</ThemedText> 
+              <ThemedText type="small">
+              Primeira Missa no Brasil (1861) - Victor Meirelles</ThemedText> 
+              <ThemedText type="small">
+              Independência ou Morte (1888) - Pedro Américo</ThemedText> 
+              <ThemedText type="small">
+              A Boba (1916) - Anita Malfatti</ThemedText> 
           </Collapsible>
 
-          <Collapsible title="Animations">
-            <ThemedText type="small">
-              This template includes an example of an animated component. The{' '}
-              <ThemedText type="code">src/components/ui/collapsible.tsx</ThemedText> component uses
-              the powerful <ThemedText type="code">react-native-reanimated</ThemedText> library to
-              animate opening this hint.
-            </ThemedText>
-          </Collapsible>
         </ThemedView>
-        {Platform.OS === 'web' && <WebBadge />}
       </ThemedView>
     </ScrollView>
   );
